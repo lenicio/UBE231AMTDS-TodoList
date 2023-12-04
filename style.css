@@ -5,3 +5,9 @@
 td {
   text-align: center;
 }
+
+.checked {
+  text-decoration: line-through;
+
+  background-color: #a7e6ab;
+}

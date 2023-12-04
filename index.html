@@ -43,7 +43,7 @@
           </td>
         </tr>
         <tr>
-          <td>Lavar a louça</td>
+          <td class="checked">Lavar a louça</td>
           <td>
             <i class="fa-solid fa-trash"></i>
             <i class="fa-solid fa-circle-check"></i>
@@ -62,13 +62,28 @@
   </main>
 
   <script>
+
     document.getElementById('adicionarAtividade').addEventListener('click', function () {
       const atividade = document.getElementById('atividade').value;
-      document.getElementById('atividade').value = '';
 
-      alert(atividade);
+      if (atividade == "") {
+        alert("Digite uma atividade");
+        return;
+      }
 
+      const tabela = document.querySelector('table tbody');
+      tabela.innerHTML += `
+        <tr>
+          <td>${atividade}</td>
+          <td>
+            <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-circle-check"></i>
+          </td>
+        </tr>
+      `;
     });
+
+    document.getElementById('atividade').value = '';
   </script>
 </body>
 
