@@ -13,10 +13,9 @@
 
   <main>
 
-    <form>
-      <input type="text" placeholder="Nova Atividade">
-      <i class="fa-solid fa-circle-plus"></i>
-    </form>
+    <input type="text" placeholder="Nova Atividade" id="atividade">
+    <i class="fa-solid fa-circle-plus" id="adicionarAtividade"></i>
+
 
     <table border="1">
       <thead>
@@ -33,24 +32,28 @@
           <td>Estudar Javascript</td>
           <td class="td-centralizada">
             <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-circle-check"></i>
           </td>
         </tr>
         <tr>
           <td>Levar o Toby para passear</td>
           <td>
             <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-circle-check"></i>
           </td>
         </tr>
         <tr>
           <td>Lavar a louça</td>
           <td>
             <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-circle-check"></i>
           </td>
         </tr>
         <tr>
           <td>Ir para Academia</td>
           <td>
             <i class="fa-solid fa-trash"></i>
+            <i class="fa-solid fa-circle-check"></i>
           </td>
         </tr>
 
@@ -58,6 +61,15 @@
     </table>
   </main>
 
+  <script>
+    document.getElementById('adicionarAtividade').addEventListener('click', function () {
+      const atividade = document.getElementById('atividade').value;
+      document.getElementById('atividade').value = '';
+
+      alert(atividade);
+
+    });
+  </script>
 </body>
 
 </html>
